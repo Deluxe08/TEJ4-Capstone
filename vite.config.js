@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
     plugins: [react(), tailwindcss()],
-    base: './', // Try relative path instead
+    base: '/TEJ4-Capstone/', // Try relative path instead
     build: {
         rollupOptions: {
             output: {
