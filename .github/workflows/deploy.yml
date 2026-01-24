@@ -19,8 +19,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20.19.x'  # Updated to 20.19.x
           
+      - name: Clean cache
+        run: rm -rf node_modules package-lock.json
+        
       - name: Install dependencies
         run: npm install
         
