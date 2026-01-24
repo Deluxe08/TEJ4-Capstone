@@ -58,7 +58,7 @@ const HomePage = () => (
 );
 
 const App = () => (
-    <BrowserRouter>
+    <BrowserRouter basename="/TEJ4-Capstone">
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route

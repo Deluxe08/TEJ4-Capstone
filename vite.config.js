@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [react(), tailwindcss()],
+    base: '/TEJ4-Capstone/', // Add this line - must match your repo name
     build: {
         rollupOptions: {
             output: {
