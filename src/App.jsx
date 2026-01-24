@@ -57,8 +57,11 @@ const HomePage = () => (
     </>
 );
 
+// Determine basename based on environment
+const basename = import.meta.env.MODE === 'development' ? '' : '/TEJ4-Capstone/';
+
 const App = () => (
-    <BrowserRouter basename="/TEJ4-Capstone/">
+    <BrowserRouter basename={basename}>
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route
