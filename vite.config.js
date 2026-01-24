@@ -3,11 +3,11 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ command }) => {
-    const base = command === 'serve' ? '' : '/TEJ4-Capstone/';
-
+    const base = command === 'build' ? '/TEJ4-Capstone/' : '/';
+    
     return {
         plugins: [react(), tailwindcss()],
-        base: base, // Empty for local dev, /repo-name/ for production
+        base: base,
         build: {
             rollupOptions: {
                 output: {

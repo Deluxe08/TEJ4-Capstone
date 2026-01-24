@@ -57,8 +57,8 @@ const HomePage = () => (
     </>
 );
 
-// Determine basename based on environment
-const basename = import.meta.env.MODE === 'development' ? '' : '/TEJ4-Capstone/';
+// Determine basename: use '/TEJ4-Capstone/' only for production builds
+const basename = import.meta.env.PROD ? '/TEJ4-Capstone/' : '/';
 
 const App = () => (
     <BrowserRouter basename={basename}>
