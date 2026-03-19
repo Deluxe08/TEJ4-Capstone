@@ -1,21 +1,20 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  // CRITICAL: This must match your GitHub repo name exactly
-  base: '/TEJ4-Capstone/',
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'animation-vendor': ['gsap', '@gsap/react', 'gsap/ScrollTrigger'],
-        }
-      }
-    },
-    chunkSizeWarningLimit: 1000,
-    sourcemap: false,
-    minify: 'esbuild'
-  }
-})
+    plugins: [react(), tailwindcss()],
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+                    'gsap-vendor': ['gsap'],
+                    'three-vendor': ['three']
+                }
+            }
+        },
+        chunkSizeWarningLimit: 1000
+    }
+});
