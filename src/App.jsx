@@ -57,11 +57,8 @@ const HomePage = () => (
     </>
 );
 
-// Determine basename: use '/TEJ4-Capstone/' only for production builds
-const basename = import.meta.env.PROD ? '/TEJ4-Capstone/' : '/';
-
 const App = () => (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter>
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route
