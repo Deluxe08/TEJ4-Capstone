@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [react(), tailwindcss()],
-    base: "/TEJ4-Capstone/",
+    base: process.env.VITE_BASE_PATH || "/react-vite-deploy" 
     build: {
         rollupOptions: {
             output: {
